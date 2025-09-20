@@ -1,17 +1,101 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Jadwal Harian
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Senin</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Praktik PGPBL</h2>
+            <p>Mata Kuliah Pemrograman Perangkat Bergerak</p>
+          </ion-label>
+        </ion-item></div>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Metodologi Penelitian</h2>
+            <p>Mata Kuliah Wajib</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Selasa</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Aerial Survey</h2>
+            <p>Menjadi Asisten Mata Kuliah Aerial Survey</p>
+          </ion-label>
+        </ion-item></div>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Istirahat</h2>
+            <p>Istirahat dulu ya</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Rabu</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Pancasila</h2>
+            <p>Mata Kuliah Wajib</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="light">
+        <ion-label>Kamis</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Pendidikan Kewarganegaraan</h2>
+            <p>Mata Kuliah Wajib</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="fifth">
+      <ion-item slot="header" color="light">
+        <ion-label>Jumat</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Pendidikan Agama</h2>
+            <p>Mata Kuliah Wajib</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="sixth">
+      <ion-item slot="header" color="light">
+        <ion-label>Sabtu</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Weekend</h2>
+            <p>Libur</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+    <ion-accordion value="seventh">
+      <ion-item slot="header" color="light">
+        <ion-label>Minggu</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-item>
+          <ion-label>
+            <h2>Weekend</h2>
+            <p>Libur</p>
+          </ion-label>
+        </ion-item></div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>

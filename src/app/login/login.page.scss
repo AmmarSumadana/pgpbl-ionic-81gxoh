@@ -1,0 +1,87 @@
+/* Background Gradient */
+.login-content {
+  --background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper */
+.login-wrapper {
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-logo {
+  font-size: 4rem;
+  color: #fff;
+}
+
+/* Card Glassmorphism */
+.login-card {
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Judul */
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+ion-card-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Input dengan ikon */
+.login-input {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  --highlight-color-focused: #4facfe;
+  --padding-start: 12px;
+}
+
+/* Tombol Login */
+.login-btn {
+  margin-top: 20px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 1rem;
+  --background: linear-gradient(135deg, #4facfe, #00c6ff);
+  --background-activated: #0096c7;
+  --color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 198, 255, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.login-btn:active {
+  transform: scale(0.97);
+}
+
+/* Animasi Card */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

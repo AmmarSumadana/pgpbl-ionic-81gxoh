@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <div class="login-wrapper">
+    <!-- Logo / Icon -->
+    <div class="logo-container">
+      <ion-icon name="log-in-outline" class="login-logo"></ion-icon>
+    </div>
+
+    <!-- Card Login -->
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Login</ion-card-title>
+        <ion-card-subtitle class="ion-text-center">Masuk untuk melanjutkan</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+          <!-- Username -->
+          <ion-item class="login-input">
+            <ion-icon slot="start" name="person-outline"></ion-icon>
+            <ion-input
+              label="Email"
+              labelPlacement="floating"
+              placeholder="Enter Your Email"
+              [(ngModel)]="email"
+              name="email"
+              type="email"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <!-- Password -->
+          <ion-item class="login-input">
+            <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+            <ion-input
+              type="password"
+              label="Password"
+              labelPlacement="floating"
+              placeholder="Masukkan password"
+              [(ngModel)]="password"
+              name="password"
+              required>
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <!-- Tombol Login -->
+          <ion-button expand="block" type="submit" [disabled]="!loginForm.valid" class="login-btn">
+            <ion-icon name="log-in-outline" slot="start"></ion-icon>
+            Login
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

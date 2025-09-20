@@ -1,0 +1,95 @@
+<ion-content [fullscreen]="true" class="register-content">
+  <div class="register-wrapper">
+    <!-- Logo / Icon -->
+    <div class="logo-container">
+      <ion-icon name="person-add-outline" class="register-logo"></ion-icon>
+    </div>
+
+    <!-- Card Register -->
+    <ion-card class="register-card">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Daftar Akun</ion-card-title>
+        <ion-card-subtitle class="ion-text-center">
+          Silakan isi data Anda untuk membuat akun baru
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+          <!-- Nama Lengkap -->
+          <ion-item class="register-input">
+            <ion-icon slot="start" name="person-outline"></ion-icon>
+            <ion-input
+              label="Nama Lengkap"
+              labelPlacement="floating"
+              placeholder="Masukkan nama Anda"
+              [(ngModel)]="fullName"
+              name="fullName"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <!-- Email -->
+          <ion-item class="register-input">
+            <ion-icon slot="start" name="mail-outline"></ion-icon>
+            <ion-input
+              label="Email"
+              labelPlacement="floating"
+              placeholder="Masukkan email Anda"
+              [(ngModel)]="email"
+              name="email"
+              type="email"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <!-- Password -->
+          <ion-item class="register-input">
+            <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+            <ion-input
+              type="password"
+              label="Password"
+              labelPlacement="floating"
+              placeholder="Masukkan password"
+              [(ngModel)]="password"
+              name="password"
+              required>
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <!-- Konfirmasi Password -->
+          <ion-item class="register-input">
+            <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+            <ion-input
+              type="password"
+              label="Konfirmasi Password"
+              labelPlacement="floating"
+              placeholder="Ulangi password"
+              [(ngModel)]="confirmPassword"
+              name="confirmPassword"
+              required>
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <!-- Tombol Register -->
+          <ion-button
+            expand="block"
+            type="submit"
+            [disabled]="!registerForm.valid"
+            class="register-btn">
+            <ion-icon name="person-add-outline" slot="start"></ion-icon>
+            Daftar
+          </ion-button>
+        </form>
+
+        <!-- Link ke Login -->
+        <p class="ion-text-center" style="margin-top: 15px; font-size: 0.9rem;">
+          Sudah punya akun?
+          <a routerLink="/login">Login di sini</a>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

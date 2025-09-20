@@ -1,0 +1,20 @@
+.splash-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  background-color: #afe4ff;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+small {
+  font-size: 11px;
+  color: #706a6a;
+  margin-top: 5%;
+}
