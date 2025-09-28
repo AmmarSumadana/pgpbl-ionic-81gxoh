@@ -2,37 +2,34 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // Halaman splashscreen
-  {
-    path: '',
-    loadChildren: () =>
-      import('./splashscreen/splashscreen.module').then(
-        (m) => m.SplashscreenPageModule
-      )
-  },
-  // Halaman login
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./login/login.module').then((m) => m.LoginPageModule)
-  },
-  // Halaman register
-  {
-    path: 'register',
-    loadChildren: () =>
-      import('./register/register.module').then((m) => m.RegisterPageModule)
-  },
-  // Halaman tabs (main app setelah login)
   {
     path: 'tabs',
-    loadChildren: () =>
-      import('./tabs/tabs.module').then((m) => m.TabsPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  // Redirect jika route tidak ditemukan
   {
-    path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
+    path: '',
+    loadChildren: () => import('./splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'maps',
+    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
+  },
+  {
+    path: 'createpoint',
+    loadChildren: () => import('./createpoint/createpoint.module').then( m => m.CreatepointPageModule)
+  },
+  {
+    // FIX: Tambahkan parameter :key agar bisa mengambil ID dari URL
+    path: 'editpoint/:key',
+    loadChildren: () => import('./editpoint/editpoint.module').then( m => m.EditpointPageModule)
   }
 ];
 

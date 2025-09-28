@@ -1,46 +1,89 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Components
+      Kotak Masuk
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-datetime [firstDayOfWeek]="1"></ion-datetime>
+
+  <ion-text color="secondary">
+    <h2>Input Components</h2>
+  </ion-text>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Text input" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Number input" type="number" placeholder="000"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Password input" type="password" value="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email input" type="email" placeholder="email@domain.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Telephone input" type="tel" placeholder="888-888-8888"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-text color="secondary">
+    <h2>Action Sheet Components</h2>
+  </ion-text>
+  <ion-button id="open-action-sheet">Open</ion-button>
+  <ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="actionSheetButtons"></ion-action-sheet>
 
   <ion-list>
     <ion-item>
-      <ion-badge slot="end">11</ion-badge>
-      <ion-label>Message</ion-label>
+      <ion-badge slot="start" color="primary">1</ion-badge>
+      <ion-label>
+        <h3>Pulau Sumatera</h3>
+        <p>10 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
     </ion-item>
     <ion-item>
-      <ion-badge slot="end">22</ion-badge>
-      <ion-label>WhatsApp</ion-label>
+      <ion-badge slot="start" color="secondary">2</ion-badge>
+      <ion-label>
+        <h3>Pulau Jawa</h3>
+        <p>6 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start" color="tertiary">3</ion-badge>
+      <ion-label>
+        <h3>Pulau Kalimantan</h3>
+        <p>5 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start" color="success">4</ion-badge>
+      <ion-label>
+        <h3>Pulau Sulawesi</h3>
+        <p>6 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start" color="warning">5</ion-badge>
+      <ion-label>
+        <h3>Pulau Maluku & Papua</h3>
+        <p>8 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start" color="danger">6</ion-badge>
+      <ion-label>
+        <h3>Pulau Bali & Nusa Tenggara</h3>
+        <p>3 Provinsi</p>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aktif</ion-badge>
     </ion-item>
   </ion-list>
-  <ion-button shape="round">
-    <ion-icon slot="icon-only" name="heart"></ion-icon>
-  </ion-button>
-
-  <ion-segment value="default">
-  <ion-segment-button value="default">
-    <ion-label>Default</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="segment">
-    <ion-label>Segment</ion-label>
-  </ion-segment-button>
-</ion-segment>
-
-<ion-segment [disabled]="true" value="disabled">
-  <ion-segment-button value="disabled">
-    <ion-label>Disabled</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="segment">
-    <ion-label>Segment</ion-label>
-  </ion-segment-button>
-</ion-segment>
-
-  <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
-<ion-datetime value="2022-04-21T00:00:00" min="2022-03-01T00:00:00" max="2022-05-31T23:59:59"></ion-datetime>
-
 </ion-content>
